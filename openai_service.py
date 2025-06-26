@@ -4,8 +4,9 @@ from openai import OpenAI
 import os
 import base64
 
-load_dotenv() # .env의 내용을 읽어서 환경변수로 설정
-client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# load_dotenv() # .env의 내용을 읽어서 환경변수로 설정
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+
 
 def stt(audio):
     # 파일로 변환

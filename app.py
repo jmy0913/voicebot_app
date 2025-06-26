@@ -11,11 +11,7 @@ from openai_service import stt, ask_gpt, tts
 # secrets 설정(TOML)에 OPENAI_API_KEY를 설정해야 한다.
 # OPEN_API_KEY = "키"
 
-client = OpenAI()
-
-
-
-
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 
 def main():
